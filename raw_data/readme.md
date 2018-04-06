@@ -1,3 +1,3 @@
-The raw kernel log files for each experimental run are around 250 mb each, which is larger than github's limit for individual files.
+This is the raw data collected for each drive we tested.
 
-We will update this with a link to the raw data once we decide where to host it.
+The raw kernel log files for each experimental run are uploaded as zip files to get them under github's limit for individual files. Please uncompress them before applying any analysis tools to them.
