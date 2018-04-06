@@ -1,0 +1,49 @@
+Read in file jiffies_nodupes_8bit.bin, 691723 bytes long.
+Dataset: 691723 8-bit symbols.
+Output symbol values: min = 0, max = 255
+	collision test not run:
+	mu_bar = 67.6685, max valid value for this test and model = 20.7261
+- Collision test *not valid* for this data set.
+	partial collection test not run:
+	mu_bar = 176.801, max valid value for this test and model = 162.007
+- Partial collection test *not valid* for this data set.
+- Markov test (map 6 bits): p(max) = 2.32781e-57, min-entropy = 1.46977
+	compression (Maurer Universal Statistic) test not run:
+	mu_bar = 7.54351, max valid value for this test and model = 7.18366
+- Compression test *not valid* for this data set.
+- Frequency test          : p(max) = 0.00435868, min-entropy = 7.42224
+
+**************
+** min-entropy = 1.46977
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 241024, cutoff = 101667...
+Pass
+	dataset 2 compressed length = 237064, cutoff = 101667...
+Pass
+	dataset 3 compressed length = 237288, cutoff = 101667...
+Pass
+	dataset 4 compressed length = 237224, cutoff = 101667...
+Pass
+	dataset 5 compressed length = 238504, cutoff = 101667...
+Pass
+	dataset 6 compressed length = 238944, cutoff = 101667...
+Pass
+	dataset 7 compressed length = 238360, cutoff = 101667...
+Pass
+	dataset 8 compressed length = 239616, cutoff = 101667...
+Pass
+	dataset 9 compressed length = 239264, cutoff = 101667...
+Pass
+	dataset 10 compressed length = 238696, cutoff = 101667...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 20-tuples
+	Check rule 1 - do three or more 20-tuples have the same value?...Fail
+		(97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116) occurs 16 times
+		(104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123) occurs 16 times
+		(165, 166, 167, 168, 169, 170, 171, 172, 173, 174, 175, 176, 177, 178, 179, 180, 181, 182, 183, 184) occurs 19 times
+** Collision sanity check - fail

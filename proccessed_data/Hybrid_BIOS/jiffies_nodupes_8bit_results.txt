@@ -1,0 +1,49 @@
+Read in file jiffies_nodupes_8bit.bin, 620090 bytes long.
+Dataset: 620090 8-bit symbols.
+Output symbol values: min = 0, max = 255
+	collision test not run:
+	mu_bar = 116.323, max valid value for this test and model = 20.7261
+- Collision test *not valid* for this data set.
+	partial collection test not run:
+	mu_bar = 203.718, max valid value for this test and model = 162.007
+- Partial collection test *not valid* for this data set.
+- Markov test (map 6 bits): p(max) = 3.58352e-11, min-entropy = 0.271092
+	compression (Maurer Universal Statistic) test not run:
+	mu_bar = 7.76956, max valid value for this test and model = 7.18366
+- Compression test *not valid* for this data set.
+- Frequency test          : p(max) = 0.00466868, min-entropy = 7.3282
+
+**************
+** min-entropy = 0.271092
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 107856, cutoff = 16810.2...
+Pass
+	dataset 2 compressed length = 95688, cutoff = 16810.2...
+Pass
+	dataset 3 compressed length = 97216, cutoff = 16810.2...
+Pass
+	dataset 4 compressed length = 97592, cutoff = 16810.2...
+Pass
+	dataset 5 compressed length = 97432, cutoff = 16810.2...
+Pass
+	dataset 6 compressed length = 95848, cutoff = 16810.2...
+Pass
+	dataset 7 compressed length = 95280, cutoff = 16810.2...
+Pass
+	dataset 8 compressed length = 95136, cutoff = 16810.2...
+Pass
+	dataset 9 compressed length = 95544, cutoff = 16810.2...
+Pass
+	dataset 10 compressed length = 96088, cutoff = 16810.2...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 90-tuples
+	Check rule 1 - do three or more 90-tuples have the same value?...Fail
+		(65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154) occurs 3 times
+		(68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157) occurs 3 times
+		(85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133, 134, 135, 136, 137, 138, 139, 140, 141, 142, 143, 144, 145, 146, 147, 148, 149, 150, 151, 152, 153, 154, 155, 156, 157, 158, 159, 160, 161, 162, 163, 164, 165, 166, 167, 168, 169, 170, 171, 172, 173, 174) occurs 3 times
+** Collision sanity check - fail

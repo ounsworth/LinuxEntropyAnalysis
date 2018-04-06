@@ -1,0 +1,45 @@
+Read in file jiffies_nodupes_6bit.bin, 620090 bytes long.
+Dataset: 620090 8-bit symbols.
+Output symbol values: min = 0, max = 63
+	collision test not run:
+	mu_bar = 38.9872, max valid value for this test and model = 20.7261
+- Collision test *not valid* for this data set.
+- Partial collection test : p(max) = 0.718275, min-entropy = 0.477392
+- Markov test (map 6 bits): p(max) = 3.58352e-11, min-entropy = 0.271092
+- Compression test        : p(max) = 0.294716, min-entropy = 1.7626
+- Frequency test          : p(max) = 0.0165041, min-entropy = 5.7912
+
+**************
+** min-entropy = 0.271092
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 91208, cutoff = 16810.2...
+Pass
+	dataset 2 compressed length = 83504, cutoff = 16810.2...
+Pass
+	dataset 3 compressed length = 84680, cutoff = 16810.2...
+Pass
+	dataset 4 compressed length = 85496, cutoff = 16810.2...
+Pass
+	dataset 5 compressed length = 84800, cutoff = 16810.2...
+Pass
+	dataset 6 compressed length = 83768, cutoff = 16810.2...
+Pass
+	dataset 7 compressed length = 82832, cutoff = 16810.2...
+Pass
+	dataset 8 compressed length = 83624, cutoff = 16810.2...
+Pass
+	dataset 9 compressed length = 83160, cutoff = 16810.2...
+Pass
+	dataset 10 compressed length = 83392, cutoff = 16810.2...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 90-tuples
+	Check rule 1 - do three or more 90-tuples have the same value?...Fail
+		(32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57) occurs 5 times
+		(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25) occurs 5 times
+		(21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46) occurs 5 times
+** Collision sanity check - fail

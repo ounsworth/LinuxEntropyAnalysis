@@ -1,0 +1,44 @@
+Read in file jiffies_6bit.bin, 878639 bytes long.
+Dataset: 878639 8-bit symbols.
+Output symbol values: min = 0, max = 63
+	collision test not run:
+	mu_bar = 21.7612, max valid value for this test and model = 20.7261
+- Collision test *not valid* for this data set.
+- Partial collection test : p(max) = 0.719042, min-entropy = 0.475852
+- Markov test (map 6 bits): p(max) = 7.37537e-29, min-entropy = 0.730103
+- Compression test        : p(max) = 0.325821, min-entropy = 1.61785
+- Frequency test          : p(max) = 0.0177422, min-entropy = 5.71423
+
+**************
+** min-entropy = 0.475852
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 185600, cutoff = 41809.8...
+Pass
+	dataset 2 compressed length = 185400, cutoff = 41809.8...
+Pass
+	dataset 3 compressed length = 184544, cutoff = 41809.8...
+Pass
+	dataset 4 compressed length = 187016, cutoff = 41809.8...
+Pass
+	dataset 5 compressed length = 185768, cutoff = 41809.8...
+Pass
+	dataset 6 compressed length = 184016, cutoff = 41809.8...
+Pass
+	dataset 7 compressed length = 184696, cutoff = 41809.8...
+Pass
+	dataset 8 compressed length = 185208, cutoff = 41809.8...
+Pass
+	dataset 9 compressed length = 185016, cutoff = 41809.8...
+Pass
+	dataset 10 compressed length = 185112, cutoff = 41809.8...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 56-tuples
+	Check rule 1 - do three or more 56-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 7, cutoff = 1.17058...Fail
+** Collision sanity check - fail

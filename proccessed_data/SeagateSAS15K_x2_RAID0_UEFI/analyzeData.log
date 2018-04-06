@@ -1,0 +1,417 @@
+
+analyzing entropyExperiment.data for SeagateSAS15K_x2_RAID0_UEFI
+
+Experiment start time:
+Linux localhost.localdomain 3.10.0-327.28.3.el7.TestBuild.x86_64 #1 SMP Thu Mar 16 14:27:21 EDT 2017 x86_64 x86_64 x86_64 GNU/Linux
+Mar 17 09:59:55 localhost.localdomain kernel: DISK_RANDOMNESS: ent_total: 11 - ent_count: 66 - jiffies: 4294669774 - cycles: 1932652176 - min_t: 11 - delta: 4294669774
+
+Experiment end time:
+Mar 17 19:09:52 localhost.localdomain kernel: DISK_RANDOMNESS: ent_total: 131 - ent_count: 520 - jiffies: 4294685311 - cycles: 1668404104 - min_t: 2 - delta: 6
+
+Num Reboots: 372
+
+extractJiffies.sh entropyExperiment.data jiffies.data
+
+extractCPUCycles.sh entropyExperiment.data cycles.data
+File contained 1501462 lines, with 655682 duplicates.
+File contained 1501462 lines, with 0 duplicates.
+
+convertToBinary.py 6 jiffies.data jiffies_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 jiffies.data jiffies_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 6 jiffies_nodupes.data jiffies_nodupes_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 jiffies_nodupes.data jiffies_nodupes_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 6 cycles.data cycles_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 cycles.data cycles_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 cycles_nodupes.data cycles_nodupes_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 6 cycles_nodupes.data cycles_nodupes_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+=== SeagateSAS15K_x2_RAID0_UEFI jiffies_6bit ============================================================================
+
+noniid_main.py jiffies_6bit.bin 8 | tee jiffies_6bit_results.txt
+Read in file jiffies_6bit.bin, 1501461 bytes long.
+Dataset: 1501461 8-bit symbols.
+Output symbol values: min = 0, max = 63
+- Collision test          : p(max) = 0.56488, min-entropy = 0.823983
+- Partial collection test : p(max) = 0.742504, min-entropy = 0.429529
+- Markov test (map 6 bits): p(max) = 6.66815e-45, min-entropy = 1.14648
+- Compression test        : p(max) = 0.618059, min-entropy = 0.694183
+- Frequency test          : p(max) = 0.0170301, min-entropy = 5.79355
+
+**************
+** min-entropy = 0.429529
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 412648, cutoff = 64492.1...
+Pass
+	dataset 2 compressed length = 397096, cutoff = 64492.1...
+Pass
+	dataset 3 compressed length = 397144, cutoff = 64492.1...
+Pass
+	dataset 4 compressed length = 394112, cutoff = 64492.1...
+Pass
+	dataset 5 compressed length = 389304, cutoff = 64492.1...
+Pass
+	dataset 6 compressed length = 388040, cutoff = 64492.1...
+Pass
+	dataset 7 compressed length = 385552, cutoff = 64492.1...
+Pass
+	dataset 8 compressed length = 382896, cutoff = 64492.1...
+Pass
+	dataset 9 compressed length = 380992, cutoff = 64492.1...
+Pass
+	dataset 10 compressed length = 378864, cutoff = 64492.1...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 65-tuples
+	Check rule 1 - do three or more 65-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 0, cutoff = 1.05094...Pass
+** Collision sanity check - pass
+
+=== SeagateSAS15K_x2_RAID0_UEFI jiffies_8bit ============================================================================
+
+noniid_main.py jiffies_8bit.bin 8 | tee jiffies_8bit_results.txt
+Read in file jiffies_8bit.bin, 1501461 bytes long.
+Dataset: 1501461 8-bit symbols.
+Output symbol values: min = 0, max = 255
+- Collision test          : p(max) = 0.558929, min-entropy = 0.839262
+- Partial collection test : p(max) = 0.344401, min-entropy = 1.53784
+- Markov test (map 6 bits): p(max) = 6.66815e-45, min-entropy = 1.14648
+- Compression test        : p(max) = 0.461842, min-entropy = 1.11453
+- Frequency test          : p(max) = 0.00586828, min-entropy = 7.18609
+
+**************
+** min-entropy = 0.839262
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 437648, cutoff = 126012...
+Pass
+	dataset 2 compressed length = 420320, cutoff = 126012...
+Pass
+	dataset 3 compressed length = 417880, cutoff = 126012...
+Pass
+	dataset 4 compressed length = 415360, cutoff = 126012...
+Pass
+	dataset 5 compressed length = 411544, cutoff = 126012...
+Pass
+	dataset 6 compressed length = 411656, cutoff = 126012...
+Pass
+	dataset 7 compressed length = 408008, cutoff = 126012...
+Pass
+	dataset 8 compressed length = 405344, cutoff = 126012...
+Pass
+	dataset 9 compressed length = 403664, cutoff = 126012...
+Pass
+	dataset 10 compressed length = 401120, cutoff = 126012...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 35-tuples
+	Check rule 1 - do three or more 35-tuples have the same value?...Fail
+		(199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233) occurs 3 times
+** Collision sanity check - fail
+
+=== SeagateSAS15K_x2_RAID0_UEFI jiffies_nodupes_6bit ============================================================================
+
+python noniid_main.py jiffies_nodupes_6bit.bin 8 | tee jiffies_nodupes_6bit_results.txt
+Read in file jiffies_nodupes_6bit.bin, 845779 bytes long.
+Dataset: 845779 8-bit symbols.
+Output symbol values: min = 0, max = 63
+	collision test not run:
+	mu_bar = 26.9627, max valid value for this test and model = 20.7261
+- Collision test *not valid* for this data set.
+- Partial collection test : p(max) = 0.71943, min-entropy = 0.475074
+- Markov test (map 6 bits): p(max) = 4.83358e-44, min-entropy = 1.12415
+- Compression test        : p(max) = 0.319, min-entropy = 1.64837
+- Frequency test          : p(max) = 0.0165114, min-entropy = 5.80856
+
+**************
+** min-entropy = 0.475074
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 255808, cutoff = 40180.3...
+Pass
+	dataset 2 compressed length = 249296, cutoff = 40180.3...
+Pass
+	dataset 3 compressed length = 250448, cutoff = 40180.3...
+Pass
+	dataset 4 compressed length = 248760, cutoff = 40180.3...
+Pass
+	dataset 5 compressed length = 248888, cutoff = 40180.3...
+Pass
+	dataset 6 compressed length = 247000, cutoff = 40180.3...
+Pass
+	dataset 7 compressed length = 247560, cutoff = 40180.3...
+Pass
+	dataset 8 compressed length = 246272, cutoff = 40180.3...
+Pass
+	dataset 9 compressed length = 245848, cutoff = 40180.3...
+Pass
+	dataset 10 compressed length = 243592, cutoff = 40180.3...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 56-tuples
+	Check rule 1 - do three or more 56-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 0, cutoff = 1.11803...Pass
+** Collision sanity check - pass
+
+=== SeagateSAS15K_x2_RAID0_UEFI jiffies_nodupes_8bit ============================================================================
+
+python noniid_main.py jiffies_nodupes_8bit.bin 8 | tee jiffies_nodupes_8bit_results.txt
+Read in file jiffies_nodupes_8bit.bin, 845779 bytes long.
+Dataset: 845779 8-bit symbols.
+Output symbol values: min = 0, max = 255
+	collision test not run:
+	mu_bar = 86.5908, max valid value for this test and model = 20.7261
+- Collision test *not valid* for this data set.
+	partial collection test not run:
+	mu_bar = 182.47, max valid value for this test and model = 162.007
+- Partial collection test *not valid* for this data set.
+- Markov test (map 6 bits): p(max) = 4.83358e-44, min-entropy = 1.12415
+	compression (Maurer Universal Statistic) test not run:
+	mu_bar = 7.626, max valid value for this test and model = 7.18366
+- Compression test *not valid* for this data set.
+- Frequency test          : p(max) = 0.00458512, min-entropy = 7.40118
+
+**************
+** min-entropy = 1.12415
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 274576, cutoff = 95077.6...
+Pass
+	dataset 2 compressed length = 265272, cutoff = 95077.6...
+Pass
+	dataset 3 compressed length = 265552, cutoff = 95077.6...
+Pass
+	dataset 4 compressed length = 263624, cutoff = 95077.6...
+Pass
+	dataset 5 compressed length = 263976, cutoff = 95077.6...
+Pass
+	dataset 6 compressed length = 263328, cutoff = 95077.6...
+Pass
+	dataset 7 compressed length = 262928, cutoff = 95077.6...
+Pass
+	dataset 8 compressed length = 262072, cutoff = 95077.6...
+Pass
+	dataset 9 compressed length = 261160, cutoff = 95077.6...
+Pass
+	dataset 10 compressed length = 259968, cutoff = 95077.6...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 26-tuples
+	Check rule 1 - do three or more 26-tuples have the same value?...Fail
+		(208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233) occurs 9 times
+		(210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235) occurs 9 times
+		(204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229) occurs 10 times
+** Collision sanity check - fail
+
+=== SeagateSAS15K_x2_RAID0_UEFI cycles_6bit ============================================================================
+
+python noniid_main.py cycles_6bit.bin 8 | tee cycles_6bit_results.txt
+Read in file cycles_6bit.bin, 1501461 bytes long.
+Dataset: 1501461 8-bit symbols.
+Output symbol values: min = 0, max = 60
+- Collision test          : p(max) = 0.343552, min-entropy = 1.5414
+- Partial collection test : p(max) = 0.916016, min-entropy = 0.126555
+- Markov test (map 6 bits): p(max) = 9.097e-145, min-entropy = 3.73824
+- Compression test        : p(max) = 0.635159, min-entropy = 0.654811
+- Frequency test          : p(max) = 0.0707611, min-entropy = 3.80068
+
+**************
+** min-entropy = 0.126555
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 715128, cutoff = 19001.7...
+Pass
+	dataset 2 compressed length = 712832, cutoff = 19001.7...
+Pass
+	dataset 3 compressed length = 713024, cutoff = 19001.7...
+Pass
+	dataset 4 compressed length = 714144, cutoff = 19001.7...
+Pass
+	dataset 5 compressed length = 713416, cutoff = 19001.7...
+Pass
+	dataset 6 compressed length = 713272, cutoff = 19001.7...
+Pass
+	dataset 7 compressed length = 709856, cutoff = 19001.7...
+Pass
+	dataset 8 compressed length = 712624, cutoff = 19001.7...
+Pass
+	dataset 9 compressed length = 712616, cutoff = 19001.7...
+Pass
+	dataset 10 compressed length = 709440, cutoff = 19001.7...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 196-tuples
+	Check rule 1 - do three or more 196-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 0, cutoff = 1.00104...Pass
+** Collision sanity check - pass
+
+=== SeagateSAS15K_x2_RAID0_UEFI cycles_8bit ============================================================================
+
+python noniid_main.py cycles_8bit.bin 8 | tee cycles_8bit_results.txt
+Read in file cycles_8bit.bin, 1501461 bytes long.
+Dataset: 1501461 8-bit symbols.
+Output symbol values: min = 0, max = 252
+- Collision test          : p(max) = 0.158535, min-entropy = 2.65713
+- Partial collection test : p(max) = 0.654232, min-entropy = 0.612125
+- Markov test (map 6 bits): p(max) = 9.097e-145, min-entropy = 3.73824
+- Compression test        : p(max) = 0.354248, min-entropy = 1.49717
+- Frequency test          : p(max) = 0.017802, min-entropy = 5.73306
+
+**************
+** min-entropy = 0.612125
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 1060152, cutoff = 91908.2...
+Pass
+	dataset 2 compressed length = 1059120, cutoff = 91908.2...
+Pass
+	dataset 3 compressed length = 1059664, cutoff = 91908.2...
+Pass
+	dataset 4 compressed length = 1060424, cutoff = 91908.2...
+Pass
+	dataset 5 compressed length = 1058472, cutoff = 91908.2...
+Pass
+	dataset 6 compressed length = 1059392, cutoff = 91908.2...
+Pass
+	dataset 7 compressed length = 1059416, cutoff = 91908.2...
+Pass
+	dataset 8 compressed length = 1060272, cutoff = 91908.2...
+Pass
+	dataset 9 compressed length = 1058368, cutoff = 91908.2...
+Pass
+	dataset 10 compressed length = 1057712, cutoff = 91908.2...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 47-tuples
+	Check rule 1 - do three or more 47-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 0, cutoff = 1.11474...Pass
+** Collision sanity check - pass
+
+=== SeagateSAS15K_x2_RAID0_UEFI cycles_nodupes_6bit ============================================================================
+
+python noniid_main.py cycles_nodupes_6bit.bin 8 | tee cycles_nodupes_6bit_results.txt
+Read in file cycles_nodupes_6bit.bin, 1501461 bytes long.
+Dataset: 1501461 8-bit symbols.
+Output symbol values: min = 0, max = 60
+- Collision test          : p(max) = 0.343552, min-entropy = 1.5414
+- Partial collection test : p(max) = 0.916016, min-entropy = 0.126555
+- Markov test (map 6 bits): p(max) = 9.097e-145, min-entropy = 3.73824
+- Compression test        : p(max) = 0.635159, min-entropy = 0.654811
+- Frequency test          : p(max) = 0.0707611, min-entropy = 3.80068
+
+**************
+** min-entropy = 0.126555
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 715128, cutoff = 19001.7...
+Pass
+	dataset 2 compressed length = 712832, cutoff = 19001.7...
+Pass
+	dataset 3 compressed length = 713024, cutoff = 19001.7...
+Pass
+	dataset 4 compressed length = 714144, cutoff = 19001.7...
+Pass
+	dataset 5 compressed length = 713416, cutoff = 19001.7...
+Pass
+	dataset 6 compressed length = 713272, cutoff = 19001.7...
+Pass
+	dataset 7 compressed length = 709856, cutoff = 19001.7...
+Pass
+	dataset 8 compressed length = 712624, cutoff = 19001.7...
+Pass
+	dataset 9 compressed length = 712616, cutoff = 19001.7...
+Pass
+	dataset 10 compressed length = 709440, cutoff = 19001.7...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 196-tuples
+	Check rule 1 - do three or more 196-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 0, cutoff = 1.00104...Pass
+** Collision sanity check - pass
+
+=== SeagateSAS15K_x2_RAID0_UEFI cycles_nodupes_8bit ============================================================================
+
+python noniid_main.py cycles_nodupes_8bit.bin 8 | tee cycles_nodupes_8bit_results.txt
+Read in file cycles_nodupes_8bit.bin, 1501461 bytes long.
+Dataset: 1501461 8-bit symbols.
+Output symbol values: min = 0, max = 252
+- Collision test          : p(max) = 0.158535, min-entropy = 2.65713
+- Partial collection test : p(max) = 0.654232, min-entropy = 0.612125
+- Markov test (map 6 bits): p(max) = 9.097e-145, min-entropy = 3.73824
+- Compression test        : p(max) = 0.354248, min-entropy = 1.49717
+- Frequency test          : p(max) = 0.017802, min-entropy = 5.73306
+
+**************
+** min-entropy = 0.612125
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 1060152, cutoff = 91908.2...
+Pass
+	dataset 2 compressed length = 1059120, cutoff = 91908.2...
+Pass
+	dataset 3 compressed length = 1059664, cutoff = 91908.2...
+Pass
+	dataset 4 compressed length = 1060424, cutoff = 91908.2...
+Pass
+	dataset 5 compressed length = 1058472, cutoff = 91908.2...
+Pass
+	dataset 6 compressed length = 1059392, cutoff = 91908.2...
+Pass
+	dataset 7 compressed length = 1059416, cutoff = 91908.2...
+Pass
+	dataset 8 compressed length = 1060272, cutoff = 91908.2...
+Pass
+	dataset 9 compressed length = 1058368, cutoff = 91908.2...
+Pass
+	dataset 10 compressed length = 1057712, cutoff = 91908.2...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 47-tuples
+	Check rule 1 - do three or more 47-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 0, cutoff = 1.11474...Pass
+** Collision sanity check - pass

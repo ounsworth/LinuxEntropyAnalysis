@@ -1,0 +1,42 @@
+Read in file cycles_nodupes_6bit.bin, 1500850 bytes long.
+Dataset: 1500850 8-bit symbols.
+Output symbol values: min = 0, max = 60
+- Collision test          : p(max) = 0.339767, min-entropy = 1.55738
+- Partial collection test : p(max) = 0.917762, min-entropy = 0.123808
+- Markov test (map 6 bits): p(max) = 3.99397e-147, min-entropy = 3.79942
+- Compression test        : p(max) = 0.633656, min-entropy = 0.658229
+- Frequency test          : p(max) = 0.0697845, min-entropy = 3.82044
+
+**************
+** min-entropy = 0.123808
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 717456, cutoff = 18581.7...
+Pass
+	dataset 2 compressed length = 714712, cutoff = 18581.7...
+Pass
+	dataset 3 compressed length = 718128, cutoff = 18581.7...
+Pass
+	dataset 4 compressed length = 717896, cutoff = 18581.7...
+Pass
+	dataset 5 compressed length = 715600, cutoff = 18581.7...
+Pass
+	dataset 6 compressed length = 716640, cutoff = 18581.7...
+Pass
+	dataset 7 compressed length = 717216, cutoff = 18581.7...
+Pass
+	dataset 8 compressed length = 718088, cutoff = 18581.7...
+Pass
+	dataset 9 compressed length = 717592, cutoff = 18581.7...
+Pass
+	dataset 10 compressed length = 717280, cutoff = 18581.7...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 200-tuples
+	Check rule 1 - do three or more 200-tuples have the same value?...Pass
+	Check rule 2 - probability of number of collisions below cutoff
+		number of collisions = 0, cutoff = 0.989899...Pass
+** Collision sanity check - pass

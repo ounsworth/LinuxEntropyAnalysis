@@ -1,0 +1,89 @@
+
+analyzing entropyExperiment.data for Raptor_UEFI
+
+Experiment start time:
+Linux localhost.localdomain 3.10.0-327.28.3.el7.TestBuild.x86_64 #1 SMP Thu Feb 16 10:58:34 EST 2017 x86_64 x86_64 x86_64 GNU/Linux
+Rebooting after 0 seconds of data collection with 1 data points collected
+
+Experiment end time:
+Rebooting after 259168 seconds of data collection with 3216 data points collected
+
+Num Reboots: 3216
+
+extractJiffies.sh entropyExperiment.data jiffies.data
+
+extractCPUCycles.sh entropyExperiment.data cycles.data
+File contained 1 lines, with 0 duplicates.
+File contained 1 lines, with 0 duplicates.
+
+convertToBinary.py 6 jiffies.data jiffies_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 jiffies.data jiffies_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 6 jiffies_nodupes.data jiffies_nodupes_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 jiffies_nodupes.data jiffies_nodupes_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 6 cycles.data cycles_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 cycles.data cycles_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 8 cycles_nodupes.data cycles_nodupes_8bit.bin
+Truncating values to 8 bits and outputting them in 8 bit symbols.
+
+convertToBinary.py 6 cycles_nodupes.data cycles_nodupes_6bit.bin
+Truncating values to 6bits and outputting them in 8 bit symbols.
+
+=== Raptor_UEFI jiffies_6bit ============================================================================
+
+noniid_main.py jiffies_6bit.bin 8 | tee jiffies_6bit_results.txt
+Read in file jiffies_6bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.
+
+=== Raptor_UEFI jiffies_8bit ============================================================================
+
+noniid_main.py jiffies_8bit.bin 8 | tee jiffies_8bit_results.txt
+Read in file jiffies_8bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.
+
+=== Raptor_UEFI jiffies_nodupes_6bit ============================================================================
+
+python noniid_main.py jiffies_nodupes_6bit.bin 8 | tee jiffies_nodupes_6bit_results.txt
+Read in file jiffies_nodupes_6bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.
+
+=== Raptor_UEFI jiffies_nodupes_8bit ============================================================================
+
+python noniid_main.py jiffies_nodupes_8bit.bin 8 | tee jiffies_nodupes_8bit_results.txt
+Read in file jiffies_nodupes_8bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.
+
+=== Raptor_UEFI cycles_6bit ============================================================================
+
+python noniid_main.py cycles_6bit.bin 8 | tee cycles_6bit_results.txt
+Read in file cycles_6bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.
+
+=== Raptor_UEFI cycles_8bit ============================================================================
+
+python noniid_main.py cycles_8bit.bin 8 | tee cycles_8bit_results.txt
+Read in file cycles_8bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.
+
+=== Raptor_UEFI cycles_nodupes_6bit ============================================================================
+
+python noniid_main.py cycles_nodupes_6bit.bin 8 | tee cycles_nodupes_6bit_results.txt
+Read in file cycles_nodupes_6bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.
+
+=== Raptor_UEFI cycles_nodupes_8bit ============================================================================
+
+python noniid_main.py cycles_nodupes_8bit.bin 8 | tee cycles_nodupes_8bit_results.txt
+Read in file cycles_nodupes_8bit.bin, 0 bytes long.
+Dataset: 0 8-bit symbols.

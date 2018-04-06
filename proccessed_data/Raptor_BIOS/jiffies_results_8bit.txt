@@ -1,0 +1,43 @@
+Read in file jiffies_8bit.bin, 1502993 bytes long.
+Dataset: 1502993 8-bit symbols.
+Output symbol values: min = 0, max = 255
+- Collision test          : p(max) = 0.638123, min-entropy = 0.648095
+- Partial collection test : p(max) = 0.525562, min-entropy = 0.928067
+- Markov test (map 6 bits): p(max) = 5.61535e-35, min-entropy = 0.888891
+- Compression test        : p(max) = 0.577316, min-entropy = 0.792566
+- Frequency test          : p(max) = 0.00488159, min-entropy = 7.41
+
+**************
+** min-entropy = 0.648095
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 369216, cutoff = 97408...
+Pass
+	dataset 2 compressed length = 355568, cutoff = 97408...
+Pass
+	dataset 3 compressed length = 356400, cutoff = 97408...
+Pass
+	dataset 4 compressed length = 354064, cutoff = 97408...
+Pass
+	dataset 5 compressed length = 374792, cutoff = 97408...
+Pass
+	dataset 6 compressed length = 412200, cutoff = 97408...
+Pass
+	dataset 7 compressed length = 409456, cutoff = 97408...
+Pass
+	dataset 8 compressed length = 409072, cutoff = 97408...
+Pass
+	dataset 9 compressed length = 409120, cutoff = 97408...
+Pass
+	dataset 10 compressed length = 411008, cutoff = 97408...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 45-tuples
+	Check rule 1 - do three or more 45-tuples have the same value?...Fail
+		(75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 75, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 76, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77, 77) occurs 5 times
+		(254, 254, 254, 254, 254, 254, 254, 254, 254, 254, 254, 254, 254, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) occurs 4 times
+		(191, 191, 191, 191, 191, 191, 191, 191, 191, 191, 191, 191, 191, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 192, 193, 193, 193, 193, 193, 193, 193, 193, 193, 193, 193, 193, 193, 193, 193, 193) occurs 4 times
+** Collision sanity check - fail

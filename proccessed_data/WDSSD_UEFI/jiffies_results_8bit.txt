@@ -1,0 +1,49 @@
+Read in file jiffies_8bit.bin, 878639 bytes long.
+Dataset: 878639 8-bit symbols.
+Output symbol values: min = 0, max = 255
+	collision test not run:
+	mu_bar = 34.234, max valid value for this test and model = 20.7261
+- Collision test *not valid* for this data set.
+	partial collection test not run:
+	mu_bar = 181.393, max valid value for this test and model = 162.007
+- Partial collection test *not valid* for this data set.
+- Markov test (map 6 bits): p(max) = 7.37537e-29, min-entropy = 0.730103
+	compression (Maurer Universal Statistic) test not run:
+	mu_bar = 7.4151, max valid value for this test and model = 7.18366
+- Compression test *not valid* for this data set.
+- Frequency test          : p(max) = 0.00617546, min-entropy = 7.06253
+
+**************
+** min-entropy = 0.730103
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 200048, cutoff = 64149...
+Pass
+	dataset 2 compressed length = 199248, cutoff = 64149...
+Pass
+	dataset 3 compressed length = 199488, cutoff = 64149...
+Pass
+	dataset 4 compressed length = 200416, cutoff = 64149...
+Pass
+	dataset 5 compressed length = 201352, cutoff = 64149...
+Pass
+	dataset 6 compressed length = 198152, cutoff = 64149...
+Pass
+	dataset 7 compressed length = 200136, cutoff = 64149...
+Pass
+	dataset 8 compressed length = 198656, cutoff = 64149...
+Pass
+	dataset 9 compressed length = 198776, cutoff = 64149...
+Pass
+	dataset 10 compressed length = 199288, cutoff = 64149...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 38-tuples
+	Check rule 1 - do three or more 38-tuples have the same value?...Fail
+		(189, 192, 195, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233) occurs 4 times
+		(196, 199, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238) occurs 4 times
+		(188, 189, 192, 195, 199, 200, 201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232) occurs 5 times
+** Collision sanity check - fail

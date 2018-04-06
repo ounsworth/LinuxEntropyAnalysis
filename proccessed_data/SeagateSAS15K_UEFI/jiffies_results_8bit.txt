@@ -1,0 +1,43 @@
+Read in file jiffies_8bit.bin, 1501451 bytes long.
+Dataset: 1501451 8-bit symbols.
+Output symbol values: min = 0, max = 255
+- Collision test          : p(max) = 0.473877, min-entropy = 1.07742
+- Partial collection test : p(max) = 0.291132, min-entropy = 1.78025
+- Markov test (map 6 bits): p(max) = 7.32142e-55, min-entropy = 1.40495
+- Compression test        : p(max) = 0.399298, min-entropy = 1.32446
+- Frequency test          : p(max) = 0.00435978, min-entropy = 7.54393
+
+**************
+** min-entropy = 1.07742
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 454472, cutoff = 161769...
+Pass
+	dataset 2 compressed length = 451984, cutoff = 161769...
+Pass
+	dataset 3 compressed length = 447120, cutoff = 161769...
+Pass
+	dataset 4 compressed length = 442232, cutoff = 161769...
+Pass
+	dataset 5 compressed length = 441112, cutoff = 161769...
+Pass
+	dataset 6 compressed length = 434696, cutoff = 161769...
+Pass
+	dataset 7 compressed length = 434280, cutoff = 161769...
+Pass
+	dataset 8 compressed length = 431448, cutoff = 161769...
+Pass
+	dataset 9 compressed length = 426792, cutoff = 161769...
+Pass
+	dataset 10 compressed length = 423008, cutoff = 161769...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 28-tuples
+	Check rule 1 - do three or more 28-tuples have the same value?...Fail
+		(201, 202, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228) occurs 5 times
+		(205, 206, 207, 208, 209, 210, 211, 212, 213, 214, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232) occurs 8 times
+		(201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 201, 202, 202, 202, 202, 202, 202, 202, 202, 202, 202, 202, 202, 202, 202, 202, 202, 203) occurs 5 times
+** Collision sanity check - fail

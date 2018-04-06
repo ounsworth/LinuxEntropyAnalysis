@@ -1,0 +1,43 @@
+Read in file jiffies_6bit.bin, 1501451 bytes long.
+Dataset: 1501451 8-bit symbols.
+Output symbol values: min = 0, max = 63
+- Collision test          : p(max) = 0.48526, min-entropy = 1.04317
+- Partial collection test : p(max) = 0.743773, min-entropy = 0.427066
+- Markov test (map 6 bits): p(max) = 7.32142e-55, min-entropy = 1.40495
+- Compression test        : p(max) = 0.579163, min-entropy = 0.78796
+- Frequency test          : p(max) = 0.0162143, min-entropy = 5.86035
+
+**************
+** min-entropy = 0.427066
+**************
+
+Compression sanity check...
+	dataset 1 compressed length = 428992, cutoff = 64121.8...
+Pass
+	dataset 2 compressed length = 426104, cutoff = 64121.8...
+Pass
+	dataset 3 compressed length = 421096, cutoff = 64121.8...
+Pass
+	dataset 4 compressed length = 416112, cutoff = 64121.8...
+Pass
+	dataset 5 compressed length = 414096, cutoff = 64121.8...
+Pass
+	dataset 6 compressed length = 407776, cutoff = 64121.8...
+Pass
+	dataset 7 compressed length = 407616, cutoff = 64121.8...
+Pass
+	dataset 8 compressed length = 403904, cutoff = 64121.8...
+Pass
+	dataset 9 compressed length = 398976, cutoff = 64121.8...
+Pass
+	dataset 10 compressed length = 396304, cutoff = 64121.8...
+Pass
+** Compression sanity check - pass
+
+Collision sanity check...
+	Dividing dataset into 65-tuples
+	Check rule 1 - do three or more 65-tuples have the same value?...Fail
+		(14, 14, 14, 14, 14, 14, 14, 14, 14, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 15, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 17, 18, 18, 18, 18, 18, 18, 18, 18) occurs 3 times
+		(59, 59, 59, 59, 59, 59, 59, 59, 59, 59, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 60, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 61, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 62, 63, 63, 63, 63, 63, 63, 63) occurs 4 times
+		(63, 63, 63, 63, 63, 63, 63, 63, 63, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3) occurs 4 times
+** Collision sanity check - fail
